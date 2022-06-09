@@ -10,7 +10,9 @@
 }
 
 .baloon {
-  /* position: absolute; */
+  position: absolute;
+  top: 550px;
+  left: 10px;
 }
 
 .speach {
@@ -24,4 +26,6 @@
 
 .bowser {
   width: 200px;
+  position: absolute;
+  top: 700px;
 }
