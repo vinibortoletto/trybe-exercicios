@@ -17,8 +17,9 @@
 
 .speach {
   position: absolute;
-  top: 430px;
+  top: 600px;
   left: 30px;
+  z-index: 1;
 
   font-size: 25px;
   color: #000;
