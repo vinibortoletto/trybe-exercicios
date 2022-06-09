@@ -7,10 +7,16 @@
 }
 
 .baloon {
+  /* position: absolute; */
 }
 
 .speach {
+  position: absolute;
+  top: 430px;
+  left: 30px;
+
   font-size: 25px;
+  color: #000;
 }
 
 .bowser {
