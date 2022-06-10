@@ -27,3 +27,11 @@ li {
 li em {
   font-weight: bold;
 }
+
+.skills li:nth-child(-n + 3) {
+  color: blue;
+}
+
+.java {
+  background-color: pink;
+}
