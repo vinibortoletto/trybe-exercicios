@@ -35,3 +35,27 @@ li em {
 .java {
   background-color: pink;
 }
+
+.websites li:hover {
+  font-weight: bold;
+}
+
+.websites li a[href*="stackoverflow"] {
+  color: orange;
+}
+
+.websites li a[href*="w3schools"] {
+  color: green;
+}
+
+.websites li a[href*="mozilla"] {
+  color: black;
+}
+
+.websites li a[href*="devdocs"] {
+  color: yellow;
+}
+
+.websites li a[href*="trybe"] {
+  color: greenyellow;
+}
