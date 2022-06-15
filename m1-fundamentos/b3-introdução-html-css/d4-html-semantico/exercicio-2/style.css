@@ -47,6 +47,22 @@ section {
   margin-bottom: 5rem;
 }
 
+p {
+  margin-bottom: var(--sz-small);
+}
+
+/* Content presets ------------------------------------------ */
+.sideImg {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.justify {
+  text-align: justify;
+}
+
 /* Header ------------------------------------------------- */
 .pageHeader {
   margin-bottom: var(--sz-small);
@@ -117,7 +133,7 @@ section {
   font-size: var(--fz-content);
 }
 
-/* Info Header ------------------------------------ */
+/* Info Section ---------------------------------------- */
 .infoHeader__scientificName {
   font-size: var(--fz-mini);
   color: var(--c-secondary-dark);
@@ -138,7 +154,6 @@ section {
 }
 
 .info__content {
-  text-align: justify;
   margin-bottom: var(--sz-big);
 }
 
@@ -148,6 +163,17 @@ section {
 
 .infoList__item span {
   color: var(--c-secondary-dark);
+}
+
+/* Description Section ----------------------------------- */
+.descriptionHeader__title {
+  margin-bottom: var(--sz-big);
+}
+
+.descriptionHeader__img {
+  float: left;
+  margin-right: var(--sz-big);
+  margin-bottom: var(--sz-big);
 }
 
 /* Remove later */
