@@ -101,7 +101,7 @@ section {
 
 /* Article Header Title ------------------------------------ */
 .articleHeader__titleContainer {
-  margin-top: -2rem;
+  margin-top: -5rem;
   margin-bottom: var(--sz-big);
   position: relative;
   z-index: 1;
@@ -110,7 +110,7 @@ section {
 .articleHeader__title {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: var(--fz-title);
+  font-size: 4rem;
 }
 
 .articleHeader__subtitle {
