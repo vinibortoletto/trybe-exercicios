@@ -81,6 +81,7 @@ hr {
 /* Header ------------------------------------------- */
 .pageHeader {
   margin-bottom: var(--sz-small);
+  text-align: center;
 }
 
 .pageHeader__title {
