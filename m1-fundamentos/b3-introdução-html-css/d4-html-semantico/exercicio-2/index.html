@@ -6,14 +6,14 @@
   </head>
   <link rel="stylesheet" href="style.css" />
   <body>
-    <header class="header">
-      <h1 class="header__title">Soco a 80km/h: Conheça o Stomatopoda</h1>
+    <header class="pageHeader">
+      <h1 class="pageHeader__title">Soco a 80km/h: Conheça o Stomatopoda</h1>
 
-      <nav class="header__nav">
+      <nav class="pageHeader__nav">
         <ul>
-          <li>Página Inicial</li>
-          <li>Sobre</li>
-          <li>Contato</li>
+          <li class="nav__item">Página Inicial</li>
+          <li class="nav__item">Sobre</li>
+          <li class="nav__item">Contato</li>
         </ul>
       </nav>
     </header>
@@ -21,34 +21,37 @@
     <main>
       <article class="article">
         <header class="article__header">
-          <div class="header__imgContainer">
-            <div class="header__imgShadow"></div>
+          <div class="articleHeader__imgContainer">
+            <div class="articleHeader__imgShadow"></div>
             <img
-              class="header__img"
+              class="articleHeader__img"
               src="https://bit.ly/3zBloEp"
               alt="Imagem do animal Stomatopoda, um crustácio marinho colorido."
             />
           </div>
 
-          <div class="header__titleContainer">
-            <h1 class="header__title">Stomatopoda</h1>
-            <h2 class="header__subtitle">Fatos sobre o Stomatopoda</h2>
+          <div class="articleHeader__titleContainer">
+            <h1 class="articleHeader__title">Stomatopoda</h1>
+            <h2 class="articleHeader__subtitle">Fatos sobre o Stomatopoda</h2>
           </div>
         </header>
 
         <!-- Informações gerais -->
-        <section>
-          <header>
-            <h2>Informações gerais</h2>
-            <h3>Nome científico: Odontodactylus scyllarus</h3>
+        <section class="info">
+          <header class="info__header">
+            <h2 class="infoHeader__title">Informações gerais</h2>
+            <h3 class="infoHeader__scientificName">
+              Nome científico: <span>Odontodactylus scyllarus</span>
+            </h3>
 
             <img
-              src="https://bit.ly/3zBlnjP"
+              class="infoHeader__img"
+              src="https://bit.ly/3QfVhIO"
               alt="Imagem do animal Stomatopoda, um crustácio marinho colorido."
             />
           </header>
 
-          <p>
+          <p class="info__content">
             Stomatopoda (ou estomatópode), chamados popularmente de tamarutacas
             ou de lacraias-do-mar no Brasil, é uma ordem de crustáceos marinhos
             da subclasse Hoplocarida, que agrupa cerca de 400 espécies,
@@ -57,13 +60,13 @@
             pata de louva-a-deus.
           </p>
 
-          <ul>
-            <li>Reino - Animalia</li>
-            <li>Filo - Arthropoda</li>
-            <li>Subfilo - Crustacea</li>
-            <li>Classe - Malacostraca</li>
-            <li>Subclasse - Hoplocarida</li>
-            <li>Ordem - Stomatopoda</li>
+          <ul class="info__list">
+            <li class="infoList__item"><span>Reino:</span> Animalia</li>
+            <li class="infoList__item"><span>Filo:</span> Arthropoda</li>
+            <li class="infoList__item"><span>Subfilo:</span> Crustacea</li>
+            <li class="infoList__item"><span>Classe:</span> Malacostraca</li>
+            <li class="infoList__item"><span>Subclasse:</span> Hoplocarida</li>
+            <li class="infoList__item"><span>Ordem:</span> Stomatopoda</li>
           </ul>
         </section>
 
