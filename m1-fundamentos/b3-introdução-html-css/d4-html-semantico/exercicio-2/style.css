@@ -199,7 +199,9 @@ hr {
   margin-left: var(--sz-small);
 }
 
-/* Remove later */
-img {
-  width: 100px;
+/* Footer -------------------------------- */
+.footer__title {
+  font-size: var(--fz-mini);
+  color: var(--c-secondary-dark);
+  text-align: center;
 }
