@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-/* Variables -------------------------------------------- */
+/* Variables ------------------------------------------------------ */
 :root {
   /* Colors */
   --c-primary-light: #d3ebcd;
   --c-secondary-light: #aedbce;
   --c-primary-dark: #1e1b1f;
   --c-secondary-dark: #839aa8;
+  --c-link: #5498c2;
+  --c-link-active: #325b75;
 
   /* Font Sizes */
   --fz-title: 2rem;
@@ -18,7 +20,7 @@
   --sz-big: 2rem;
 }
 
-/* Resets ------------------------------------------------ */
+/* Resets ---------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +43,10 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--c-link);
+}
+a:visited {
+  color: var(--c-link-active);
 }
 
 section {
@@ -56,7 +62,7 @@ hr {
   margin-bottom: var(--sz-big);
 }
 
-/* Content presets ------------------------------------------ */
+/* Content presets ------------------------------------------- */
 .sideImg {
   width: 50%;
   height: 300px;
@@ -72,7 +78,7 @@ hr {
   font-weight: bold;
 }
 
-/* Header ------------------------------------------------- */
+/* Header ------------------------------------------- */
 .pageHeader {
   margin-bottom: var(--sz-small);
 }
@@ -96,7 +102,7 @@ hr {
   cursor: pointer;
 }
 
-/* Article Header Image ------------------------------------ */
+/* Article Header Image ------------------------------------- */
 .article {
   padding: var(--sz-small);
 }
@@ -124,7 +130,7 @@ hr {
   object-fit: cover;
 }
 
-/* Article Header Title ------------------------------------ */
+/* Article Header Title ---------------- */
 .articleHeader__titleContainer {
   margin-top: -5rem;
   margin-bottom: var(--sz-big);
@@ -142,7 +148,7 @@ hr {
   font-size: var(--fz-content);
 }
 
-/* Info Section ---------------------------------------- */
+/* Info Section ----------------------- */
 .infoHeader__scientificName {
   font-size: var(--fz-mini);
   color: var(--c-secondary-dark);
@@ -174,18 +180,23 @@ hr {
   color: var(--c-secondary-dark);
 }
 
-/* Description Section ----------------------------------- */
+/* Description Section ----------------------- */
 .descriptionHeader__img {
   float: left;
   margin-right: var(--sz-big);
   margin-bottom: var(--sz-big);
 }
 
-/* Vision Section --------------------------------------- */
+/* Vision Section ----------------------------- */
 .visionHeader__img {
   float: right;
   margin-left: var(--sz-big);
   margin-bottom: var(--sz-big);
+}
+
+/* References Section ------------------------- */
+.references__list {
+  margin-left: var(--sz-small);
 }
 
 /* Remove later */
