@@ -18,3 +18,4 @@ console.log(
 console.log(
   `A jogadora possui ${player.medals.golden} medalhas de ouro e ${player.medals.silver} medalhas de prata`
 );
+
