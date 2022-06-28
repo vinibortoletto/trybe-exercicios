@@ -1,13 +1,3 @@
-/*
-  Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-    - document.getElementById()
-    - document.getElementsByClassName()
-    - document.getElementsByTagName()
-   
-    
-   Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-*/
-
 const pElmts = document.getElementsByTagName("p");
 for (p of pElmts) {
   if (p.innerText.includes("-")) {
@@ -16,6 +6,8 @@ for (p of pElmts) {
 
   p.style.textTransform = "uppercase";
   p.style.color = "black";
+
+  console.log(p.innerText);
 }
 
 const mainContent = document.getElementsByClassName("main-content");
