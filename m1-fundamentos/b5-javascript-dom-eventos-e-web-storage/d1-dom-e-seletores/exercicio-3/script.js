@@ -5,7 +5,6 @@
     - document.getElementsByTagName()
    
     
-   Crie uma função que mude a cor do quadrado vermelho para branco.
    Crie uma função que corrija o texto da tag <h1>.
    Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
    Crie uma função que exiba o conteúdo de todas as tags <p> no console.
@@ -20,3 +19,6 @@ for (p of pElmts) {
 
 const mainContent = document.getElementsByClassName("main-content");
 mainContent[0].style.backgroundColor = "rgb(76, 164, 109)";
+
+const centerContent = document.getElementsByClassName("center-content");
+centerContent[0].style.backgroundColor = "white";
