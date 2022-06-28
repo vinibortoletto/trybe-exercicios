@@ -5,7 +5,6 @@
     - document.getElementsByTagName()
    
     
-   Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
    Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 */
 
@@ -14,6 +13,9 @@ for (p of pElmts) {
   if (p.innerText.includes("-")) {
     p.innerText = "Me vejo como um excelente desenvolvedor.";
   }
+
+  p.style.textTransform = "uppercase";
+  p.style.color = "black";
 }
 
 const mainContent = document.getElementsByClassName("main-content");
