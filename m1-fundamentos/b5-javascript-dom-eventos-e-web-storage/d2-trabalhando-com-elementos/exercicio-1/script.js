@@ -1,3 +1,5 @@
+// Exercício 1 --------------------------------------------------
+
 // Requisito 1
 const sectionWhereAreYou = document.getElementById("elementoOndeVoceEsta");
 
@@ -23,3 +25,23 @@ console.log(sectionWhereAreYou.nextElementSibling);
 
 // Requisito 8
 console.log(sectionFather.lastElementChild.previousElementSibling);
+
+// Exercício 2 --------------------------------------------------
+
+// Requisito 1
+let brotherElement = document.createElement("section");
+brotherElement.id = "irmãoElementoOndeVoceEsta";
+sectionFather.appendChild(brotherElement);
+
+// Requisito 2
+let sonElement = document.createElement("p");
+sonElement.id = "filhoElementOndeVoceEsta";
+sectionWhereAreYou.appendChild(sonElement);
+
+// Requisito 3
+let sonElement2 = document.createElement("p");
+sonElement2.id = "filhoDoPrimeiroFilhoDoFilho";
+sectionFirstSonOfSon.appendChild(sonElement2);
+
+// Requisito 4
+console.log(sonElement2.parentElement.parentElement.nextElementSibling);
