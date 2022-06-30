@@ -74,3 +74,16 @@ function toggleHolidayColor() {
 }
 
 holidayButton.addEventListener("click", toggleHolidayColor);
+
+// Requisito 4
+function createFridayButton(buttonText) {
+  const buttonsContainerElement = document.querySelector(".buttons-container");
+
+  const buttonElement = document.createElement("button");
+  buttonElement.id = "btn-friday";
+  buttonElement.innerText = buttonText;
+
+  buttonsContainerElement.appendChild(buttonElement);
+}
+
+createFridayButton("Sexta-feita");
