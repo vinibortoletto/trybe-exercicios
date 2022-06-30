@@ -57,3 +57,9 @@ for (let i = 0; i < 10; i += 1) {
 }
 
 sectionRightElement.appendChild(listElement);
+
+// Requisito 9
+for (let i = 0; i < 3; i += 1) {
+  const subtitleElement = document.createElement("h3");
+  mainElement.appendChild(subtitleElement);
+}
