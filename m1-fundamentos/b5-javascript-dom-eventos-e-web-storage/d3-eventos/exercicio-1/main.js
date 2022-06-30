@@ -20,7 +20,7 @@ function animateLiElements(e) {
 }
 
 for (li of liElements) {
-  li.addEventListener("click", (e) => animateLiElements(e));
+  li.addEventListener("click", animateLiElements);
 }
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
@@ -30,7 +30,7 @@ function updateBoxText(e) {
   techElement.innerText = e.target.value;
 }
 
-input.addEventListener("keypress", (e) => updateBoxText(e));
+input.addEventListener("keypress", updateBoxText);
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
@@ -44,6 +44,16 @@ myWebpage.addEventListener("dblclick", redirectToPortfolio);
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+function changeTop3Color() {
+  if (myWebpage.style.color === "green") {
+    myWebpage.style.color = "white";
+  } else {
+    myWebpage.style.color = "green";
+  }
+}
+
+myWebpage.addEventListener("mouseenter", changeTop3Color);
+myWebpage.addEventListener("mouseleave", changeTop3Color);
 
 // Segue abaixo um exemplo do uso de event.target:
 
