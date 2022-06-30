@@ -28,3 +28,9 @@ mainElement.appendChild(sectionLeftElement);
 const sectionRightElement = document.createElement("section");
 sectionRightElement.classList = "right-content";
 mainElement.appendChild(sectionRightElement);
+
+// Requisito 7
+const imageElement = document.createElement("img");
+imageElement.src = "https://picsum.photos/200";
+imageElement.classList = "small-image";
+sectionLeftElement.appendChild(imageElement);
