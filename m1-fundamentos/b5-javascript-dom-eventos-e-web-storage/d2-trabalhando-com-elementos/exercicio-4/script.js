@@ -72,3 +72,6 @@ const subtitleElements = document.getElementsByTagName("h3");
 for (element of subtitleElements) {
   element.classList = "description";
 }
+
+// Requisito 12
+mainElement.removeChild(sectionLeftElement);
