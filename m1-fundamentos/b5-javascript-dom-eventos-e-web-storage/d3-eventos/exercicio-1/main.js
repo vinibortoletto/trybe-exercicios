@@ -14,8 +14,8 @@ const myWebpage = document.getElementById("my-spotrybefy");
 const liElements = document.querySelectorAll("li");
 
 function animateLiElements(e) {
-  const elementWithClassTech = document.querySelector(".tech");
-  elementWithClassTech.classList.remove("tech");
+  const techElement = document.querySelector(".tech");
+  techElement.classList.remove("tech");
   e.target.classList.add("tech");
 }
 
@@ -25,6 +25,12 @@ for (li of liElements) {
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+function updateBoxText(e) {
+  const techElement = document.querySelector(".tech");
+  techElement.innerText = e.target.value;
+}
+
+input.addEventListener("keypress", (e) => updateBoxText(e));
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
