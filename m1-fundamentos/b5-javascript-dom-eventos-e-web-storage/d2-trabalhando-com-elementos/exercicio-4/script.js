@@ -78,3 +78,6 @@ mainElement.removeChild(sectionLeftElement);
 
 // Requisito 13
 sectionRightElement.style.marginRight = "auto";
+
+// Requisito 14
+mainElement.style.backgroundColor = "green";
