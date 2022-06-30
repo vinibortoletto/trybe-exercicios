@@ -87,3 +87,20 @@ function createFridayButton(buttonText) {
 }
 
 createFridayButton("Sexta-feita");
+
+// Requisito 5
+function modifyFridayText() {
+  const fridayElements = document.querySelectorAll(".friday");
+  const fridayNumbers = [4, 11, 18, 25];
+
+  for (let i = 0; i < fridayElements.length; i += 1) {
+    if (fridayElements[i].innerText === "SEXTASTES") {
+      fridayElements[i].innerText = fridayNumbers[i];
+    } else {
+      fridayElements[i].innerText = "SEXTASTES";
+    }
+  }
+}
+
+const fridayButton = document.querySelector("#btn-friday");
+fridayButton.addEventListener("click", modifyFridayText);
