@@ -23,3 +23,8 @@ sectionCenterElement.appendChild(pElement);
 const sectionLeftElement = document.createElement("section");
 sectionLeftElement.classList = "left-content";
 mainElement.appendChild(sectionLeftElement);
+
+// Requisito 6
+const sectionRightElement = document.createElement("section");
+sectionRightElement.classList = "right-content";
+mainElement.appendChild(sectionRightElement);
