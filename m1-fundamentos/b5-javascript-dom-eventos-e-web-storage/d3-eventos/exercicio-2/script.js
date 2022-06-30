@@ -45,3 +45,13 @@ for (day of decemberDaysList) {
 }
 
 // Requisito 2
+function createHolidayButton(buttonText) {
+  const buttonsContainerElement = document.querySelector(".buttons-container");
+
+  const buttonElement = document.createElement("button");
+  buttonElement.id = "btn-holiday";
+  buttonElement.innerText = buttonText;
+  buttonsContainerElement.appendChild(buttonElement);
+}
+
+createHolidayButton("Feriados");
