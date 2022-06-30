@@ -18,3 +18,8 @@ mainElement.appendChild(sectionCenterElement);
 // Requisito 4
 const pElement = document.createElement("p");
 sectionCenterElement.appendChild(pElement);
+
+// Requisito 5
+const sectionLeftElement = document.createElement("section");
+sectionLeftElement.classList = "left-content";
+mainElement.appendChild(sectionLeftElement);
