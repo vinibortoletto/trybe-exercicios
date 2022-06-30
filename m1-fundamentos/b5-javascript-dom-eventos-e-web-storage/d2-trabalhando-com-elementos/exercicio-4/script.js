@@ -9,3 +9,8 @@ body.appendChild(title);
 const mainElement = document.createElement("main");
 mainElement.classList = "main-content";
 body.appendChild(mainElement);
+
+// Requisito 3
+const sectionCenter = document.createElement("section");
+sectionCenter.classList = "center-content";
+mainElement.appendChild(sectionCenter);
