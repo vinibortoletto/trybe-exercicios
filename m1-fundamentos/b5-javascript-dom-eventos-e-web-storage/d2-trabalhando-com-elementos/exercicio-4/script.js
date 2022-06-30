@@ -75,3 +75,6 @@ for (element of subtitleElements) {
 
 // Requisito 12
 mainElement.removeChild(sectionLeftElement);
+
+// Requisito 13
+sectionRightElement.style.marginRight = "auto";
