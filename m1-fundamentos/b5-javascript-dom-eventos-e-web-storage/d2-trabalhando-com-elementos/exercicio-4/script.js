@@ -81,3 +81,7 @@ sectionRightElement.style.marginRight = "auto";
 
 // Requisito 14
 mainElement.style.backgroundColor = "green";
+
+// Requisito 15
+listElement.lastElementChild.remove();
+listElement.lastElementChild.remove();
