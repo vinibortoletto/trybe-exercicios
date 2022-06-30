@@ -34,3 +34,26 @@ const imageElement = document.createElement("img");
 imageElement.src = "https://picsum.photos/200";
 imageElement.classList = "small-image";
 sectionLeftElement.appendChild(imageElement);
+
+// Requisito 8
+const listElement = document.createElement("ul");
+const listItemContent = [
+  "um",
+  "dois",
+  "três",
+  "quatro",
+  "cinco",
+  "seis",
+  "sete",
+  "oito",
+  "nove",
+  "dez",
+];
+
+for (let i = 0; i < 10; i += 1) {
+  const listItemElement = document.createElement("li");
+  listItemElement.innerText = listItemContent[i];
+  listElement.appendChild(listItemElement);
+}
+
+sectionRightElement.appendChild(listElement);
