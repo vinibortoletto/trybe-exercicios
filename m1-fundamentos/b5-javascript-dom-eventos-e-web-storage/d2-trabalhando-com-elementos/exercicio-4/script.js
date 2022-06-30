@@ -66,3 +66,9 @@ for (let i = 0; i < 3; i += 1) {
 
 // Requisito 10
 titleElement.classList = "title";
+
+// Requisito 11
+const subtitleElements = document.getElementsByTagName("h3");
+for (element of subtitleElements) {
+  element.classList = "description";
+}
