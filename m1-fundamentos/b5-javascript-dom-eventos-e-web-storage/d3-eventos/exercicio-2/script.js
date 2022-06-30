@@ -55,3 +55,22 @@ function createHolidayButton(buttonText) {
 }
 
 createHolidayButton("Feriados");
+
+// Requisito 3
+const holidayButton = document.querySelector("#btn-holiday");
+
+function toggleHolidayColor() {
+  const dayElemets = document.querySelectorAll(".day");
+
+  for (day of dayElemets) {
+    if (day.classList.contains("holiday")) {
+      if (day.style.backgroundColor === "lightgreen") {
+        day.style.backgroundColor = "rgb(238,238,238)";
+      } else {
+        day.style.backgroundColor = "lightgreen";
+      }
+    }
+  }
+}
+
+holidayButton.addEventListener("click", toggleHolidayColor);
