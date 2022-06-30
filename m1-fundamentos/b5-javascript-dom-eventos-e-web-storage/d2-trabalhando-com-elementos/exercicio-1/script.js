@@ -1,4 +1,4 @@
-// Exercício 1 --------------------------------------------------
+/* // Exercício 1 --------------------------------------------------
 
 // Requisito 1
 const sectionWhereAreYou = document.getElementById("elementoOndeVoceEsta");
@@ -12,19 +12,19 @@ sectionFirstSonOfSon.innerText = "Seção: primeiro filho do filho";
 
 // Requisito 4
 const sectionFather = document.getElementById("pai");
-console.log(sectionFather.firstElementChild);
+// console.log(sectionFather.firstElementChild);
 
 // Requisito 5
-console.log(sectionWhereAreYou.previousElementSibling);
+// console.log(sectionWhereAreYou.previousElementSibling);
 
 // Requisito 6
-console.log(sectionWhereAreYou.nextSibling);
+// console.log(sectionWhereAreYou.nextSibling);
 
 // Requisito 7
-console.log(sectionWhereAreYou.nextElementSibling);
+// console.log(sectionWhereAreYou.nextElementSibling);
 
 // Requisito 8
-console.log(sectionFather.lastElementChild.previousElementSibling);
+// console.log(sectionFather.lastElementChild.previousElementSibling);
 
 // Exercício 2 --------------------------------------------------
 
@@ -41,7 +41,18 @@ sectionWhereAreYou.appendChild(sonElement);
 // Requisito 3
 let sonElement2 = document.createElement("p");
 sonElement2.id = "filhoDoPrimeiroFilhoDoFilho";
-sectionFirstSonOfSon.appendChild(sonElement2);
+sectionFirstSonOfSon.appendChild(sonElement2); */
 
 // Requisito 4
-console.log(sonElement2.parentElement.parentElement.nextElementSibling);
+// console.log(sonElement2.parentElement.parentElement.nextElementSibling);
+
+// Exercício 3 --------------------------------------------------
+const father = document.getElementById("pai");
+for (let i = father.children.length - 1; i >= 0; i -= 1) {
+  if (father.children[i].id !== "elementoOndeVoceEsta") {
+    father.removeChild(father.children[i]);
+  }
+}
+
+const sectionWhereAreYou = father.firstElementChild;
+sectionWhereAreYou.lastElementChild.remove();
