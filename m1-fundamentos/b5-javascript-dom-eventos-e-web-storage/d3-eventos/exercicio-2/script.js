@@ -121,3 +121,13 @@ function animateDays() {
 }
 
 window.onload = animateDays;
+
+// Requisito 7
+function createTask(taskText) {
+  const myTasksElement = document.querySelector(".my-tasks");
+  const taskElement = document.createElement("span");
+  taskElement.innerText = taskText;
+  myTasksElement.appendChild(taskElement);
+}
+
+createTask("cozinhar");
