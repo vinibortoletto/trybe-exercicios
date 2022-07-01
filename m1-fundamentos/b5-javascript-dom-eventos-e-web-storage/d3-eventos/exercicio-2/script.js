@@ -104,3 +104,20 @@ function modifyFridayText() {
 
 const fridayButton = document.querySelector("#btn-friday");
 fridayButton.addEventListener("click", modifyFridayText);
+
+// Requisito 6
+function animateDays() {
+  const dayElements = document.querySelectorAll(".day");
+
+  for (day of dayElements) {
+    day.addEventListener("mouseenter", (e) => {
+      e.target.style.fontSize = "30px";
+    });
+
+    day.addEventListener("mouseleave", (e) => {
+      e.target.style.fontSize = "20px";
+    });
+  }
+}
+
+window.onload = animateDays;
