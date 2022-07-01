@@ -143,4 +143,22 @@ function addSubtitle(color) {
   myTasksElement.appendChild(subtitleElement);
 }
 
-addSubtitle("orange");
+addSubtitle("red");
+
+// Requisito 9
+function selectTaks() {
+  const taskElements = document.querySelectorAll(".task");
+
+  for (task of taskElements) {
+    task.addEventListener("click", () => {
+      if (task.classList.contains("selected")) {
+        task.classList.remove("selected");
+        task.style.borderWidth = "1px";
+      } else {
+        task.classList.add("selected");
+        task.style.borderWidth = "3px";
+      }
+    });
+  }
+}
+selectTaks();
