@@ -131,3 +131,16 @@ function createTask(taskText) {
 }
 
 createTask("cozinhar");
+
+// Requisito 8
+function addSubtitle(color) {
+  const myTasksElement = document.querySelector(".my-tasks");
+  const subtitleElement = document.createElement("div");
+
+  subtitleElement.classList = "task";
+  subtitleElement.style.backgroundColor = color;
+
+  myTasksElement.appendChild(subtitleElement);
+}
+
+addSubtitle("orange");
