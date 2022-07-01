@@ -146,7 +146,7 @@ function addSubtitle(color) {
 addSubtitle("red");
 
 // Requisito 9
-function selectTaks() {
+function selectTask() {
   const taskElements = document.querySelectorAll(".task");
 
   for (task of taskElements) {
@@ -161,7 +161,7 @@ function selectTaks() {
     });
   }
 }
-selectTaks();
+selectTask();
 
 // Requisito 10
 function addColorToDate() {
@@ -180,3 +180,24 @@ function addColorToDate() {
   }
 }
 addColorToDate();
+
+// Requisito BONUS
+function addNewTask() {
+  const addButton = document.querySelector("#btn-add");
+
+  addButton.addEventListener("click", () => {
+    const myTasksElement = document.querySelector(".my-tasks");
+    const taskInputElement = document.querySelector("#task-input");
+
+    if (taskInputElement.value !== "") {
+      const newTaskElement = document.createElement("span");
+      newTaskElement.innerText = taskInputElement.value;
+      myTasksElement.appendChild(newTaskElement);
+      taskInputElement.value = "";
+    } else {
+      alert("Adicione um tarefa");
+    }
+  });
+}
+
+addNewTask();
