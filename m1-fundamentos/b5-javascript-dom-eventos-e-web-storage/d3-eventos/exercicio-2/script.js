@@ -162,3 +162,21 @@ function selectTaks() {
   }
 }
 selectTaks();
+
+// Requisito 10
+function addColorToDate() {
+  const dayElements = document.querySelectorAll(".day");
+  const firstTaskElement = document.querySelector(".task");
+  const color = firstTaskElement.style.backgroundColor;
+
+  for (day of dayElements) {
+    day.addEventListener("click", (e) => {
+      if (e.target.style.backgroundColor === color) {
+        e.target.style.backgroundColor = "#eeeeee";
+      } else {
+        e.target.style.backgroundColor = color;
+      }
+    });
+  }
+}
+addColorToDate();
