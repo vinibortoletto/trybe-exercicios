@@ -8,30 +8,41 @@
   </head>
   <body>
     <form action="">
-      <input
-        type="email"
-        name="email"
-        id="email"
-        aria-label="email"
-        placeholder="Digite seu email"
-        required
-        autocomplete="off"
-        autofocus
-      />
-      <input
-        type="password"
-        name="password"
-        id="password"
-        aria-label="password"
-        placeholder="Digite sua senha"
-        required
-      />
-      <input
-        type="checkbox"
-        name="remember-me"
-        id="remember-me"
-        aria-label="remember me"
-      />
+      <label for="email">
+        Email:
+        <input
+          type="email"
+          name="email"
+          id="email"
+          aria-label="email"
+          placeholder="Digite seu email"
+          required
+          autocomplete="off"
+          autofocus
+        />
+      </label>
+
+      <label for="password">
+        Password:
+        <input
+          type="password"
+          name="password"
+          id="password"
+          aria-label="password"
+          placeholder="Digite sua senha"
+          required
+        />
+      </label>
+
+      <label for="remember">
+        <input
+          type="checkbox"
+          name="remember"
+          id="remember"
+          aria-label="remember"
+        />
+        Remember?
+      </label>
 
       <button type="submit">Entrar</button>
     </form>
