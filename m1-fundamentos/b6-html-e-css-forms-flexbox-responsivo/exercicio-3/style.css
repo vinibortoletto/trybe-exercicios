@@ -1,0 +1,111 @@
+:root {
+  --c-lightGrey: #a9cac3;
+  --c-white: #e3f5f1;
+  --c-lightGreen: #0daa88;
+  --c-green: #006c54;
+  --c-darkGreen: #064134;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--c-darkGreen);
+  color: var(--c-white);
+  margin: 2rem;
+}
+
+form {
+  max-width: 50rem;
+  margin: auto;
+}
+
+.personal-info {
+  display: flex;
+  gap: 2rem;
+}
+
+fieldset {
+  padding: 2rem;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  border: 0;
+  background-color: var(--c-green);
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+input,
+textarea {
+  margin: 0.5rem 0;
+  color: var(--c-darkGreen);
+}
+
+label,
+p {
+  font-weight: bold;
+}
+
+#fullName,
+#email {
+  border: 1px solid var(--c-white);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  display: block;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  border-radius: 0.2rem;
+  border: none;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+button {
+  padding: 1rem 3rem;
+  background-color: var(--c-white);
+  border: none;
+  border-radius: 0.2rem;
+  color: var(--c-darkGreen);
+  font-weight: bold;
+}
+
+button:disabled {
+  background-color: var(--c-green);
+}
+
+button[type='reset'] {
+  background-color: var(--c-green);
+  color: var(--c-white);
+}
+
+button[type='submit'] {
+  background-color: var(--c-lightGrey);
+}
+
+.destination-container {
+  margin-bottom: 1rem;
+}
+
+.destination-container .input-field {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.destination-container label {
+  font-weight: normal;
+}
