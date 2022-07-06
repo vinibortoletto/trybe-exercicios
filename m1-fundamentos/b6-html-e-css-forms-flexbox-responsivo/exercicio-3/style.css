@@ -1,5 +1,5 @@
 :root {
-  --c-lightGrey: #a9cac3;
+  --c-lightGrey: #8aa8a2;
   --c-white: #e3f5f1;
   --c-lightGreen: #0daa88;
   --c-green: #006c54;
@@ -82,10 +82,7 @@ button {
   border-radius: 0.2rem;
   color: var(--c-darkGreen);
   font-weight: bold;
-}
-
-button:disabled {
-  background-color: var(--c-green);
+  cursor: pointer;
 }
 
 button[type='reset'] {
@@ -94,6 +91,10 @@ button[type='reset'] {
 }
 
 button[type='submit'] {
+  background-color: var(--c-white);
+}
+
+button:disabled {
   background-color: var(--c-lightGrey);
 }
 
