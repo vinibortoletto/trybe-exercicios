@@ -1,0 +1,21 @@
+body {
+  max-width: 700px !important;
+  background: #1a4d35 !important;
+}
+
+input,
+textarea {
+  background-color: #3a8f67 !important;
+  border: none !important;
+  color: white !important;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1) !important;
+}
+
+.just-validate-error-label {
+  margin-top: 0.3rem;
+  color: rgb(255, 85, 85) !important;
+  font-size: 0.8rem;
+}
