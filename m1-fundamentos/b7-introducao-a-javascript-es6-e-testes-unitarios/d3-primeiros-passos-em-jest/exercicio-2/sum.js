@@ -1,9 +1,16 @@
-const sum = (a, b) => {
+const throwError = (a, b) => {
   if (typeof a !== 'number' || typeof b !== 'number') {
     throw new Error('Parameters must be of type number.');
   }
-
-  return a + b;
 };
 
-module.exports = sum;
+const sum = (a, b) => {
+  try {
+    throwError(a, b);
+    return a + b;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+module.exports = { sum, throwError };

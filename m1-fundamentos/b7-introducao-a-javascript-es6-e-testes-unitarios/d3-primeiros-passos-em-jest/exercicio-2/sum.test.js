@@ -1,4 +1,4 @@
-const sum = require('./sum');
+const { sum, throwError } = require('./sum');
 
 describe('sum', () => {
   it('1. should be a function', () => {
@@ -11,10 +11,10 @@ describe('sum', () => {
   });
 
   it('3. should throw error if parameters are not of type number', () => {
-    expect(() => sum()).toThrow();
+    expect(() => throwError()).toThrow();
   });
 
   it('4. should match error message', () => {
-    expect(() => sum()).toThrow('Parameters must be of type number.');
+    expect(() => throwError()).toThrow('Parameters must be of type number.');
   });
 });
