@@ -17,13 +17,22 @@ const greet = (temperature) => {
   );
 };
 
-const sendMarsTemperature = (callback) => {
+const handleError = (errorReason) => {
+  console.log(`Error getting temperature: ${errorReason}`);
+};
+
+const sendMarsTemperature = (handleTemp, handleError) => {
   setTimeout(() => {
     const temperature = getMarsTemperature();
     console.log(`Mars temperature is: ${temperature} degree Celsius`);
-    callback(temperature);
+    console.log('-------------------');
+
+    const successRate = Math.random() <= 0.6;
+
+    if (successRate) handleTemp(temperature);
+    else handleError('Robot is busy');
   }, messageDelay());
 };
 
-sendMarsTemperature(temperatureInFahrenheit);
-sendMarsTemperature(greet);
+sendMarsTemperature(temperatureInFahrenheit, handleError);
+sendMarsTemperature(greet, handleError);
