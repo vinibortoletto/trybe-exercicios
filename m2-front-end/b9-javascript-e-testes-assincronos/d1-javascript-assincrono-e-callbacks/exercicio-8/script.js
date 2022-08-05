@@ -1,37 +1,32 @@
 const pokemons = [
   {
     name: 'Bulbasaur',
-    type: 'Grass',
-    ability: 'Razor Leaf',
+    type: 'Grama',
+    ability: 'Raio Solar',
   },
   {
     name: 'Charmander',
-    type: 'Fire',
-    ability: 'Ember',
+    type: 'Fogo',
+    ability: 'Lança Chamas',
   },
   {
     name: 'Squirtle',
-    type: 'Water',
-    ability: 'Water Gun',
+    type: 'Água',
+    ability: 'Jato de Água',
   },
 ];
 
-function findPokemon(pokemons, pokemonName) {
-  return pokemons.find((pokemon) => pokemon.name === pokemonName);
-}
+function getPokemonDetails(selectedPokemon, callback) {
+  const foundPokemon = pokemons.find(
+    (pokemon) => pokemon.name === selectedPokemon
+  );
 
-function handleError(error, message) {
-  if (error) console.log(error);
-  else console.log(message);
-}
-
-function getPokemonDetails(filter, callback) {
   setTimeout(() => {
-    if (pokemons.find(filter) === undefined) {
+    if (foundPokemon === undefined) {
       return callback(new Error('Não temos esse pokémon para você :('), null);
     }
-    const pokemon = pokemons.find(filter);
-    const { name, type, ability } = pokemon;
+
+    const { name, type, ability } = foundPokemon;
 
     const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
 
@@ -39,8 +34,11 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-getPokemonDetails((pokemon) => pokemon.name === 'Charmander', handleError);
-
-module.exports = {
-  getPokemonDetails,
+const handleError = (error, message) => {
+  if (error) console.log(error);
+  else console.log(message);
 };
+
+// getPokemonDetails('Bulbasaur', handleError);
+
+module.exports = { getPokemonDetails, handleError };
