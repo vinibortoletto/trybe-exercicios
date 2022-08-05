@@ -1,16 +1,15 @@
-const { exportAllDeclaration } = require('@babel/types');
-const exp = require('constants');
-const displayResult = require('./script');
+// Verifique se a importação do arquivo correto está sendo feita.
+const { getPokemonDetails } = require('./script');
 
-describe('displayResult', () => {
-  it('1. should display result correctly', (done) => {
-    displayResult(1, 2, (n1, n2) => {
-      try {
-        expect(n1 + n2).toBe(3);
-        done();
-      } catch (error) {
-        done(error);
-      }
-    });
+describe('A função getPokemonDetails', () => {
+  it('retorna erro quando procuramos um pokemon que não existe no banco de dados', () => {
+    getPokemonDetails(
+      (pokemon) => pokemon.name === 'Charmander',
+      () => {}
+    );
+  });
+
+  it('retorna um pokemon que existe no banco de dados', () => {
+    // Escreva aqui seu código
   });
 });
