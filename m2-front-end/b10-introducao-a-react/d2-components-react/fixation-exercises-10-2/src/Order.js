@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Order extends React.Component {
   render() {
@@ -13,5 +14,17 @@ class Order extends React.Component {
     );
   }
 }
+
+Order.propTypes = {
+  order: PropTypes.shape({
+    key: PropTypes.number,
+    user: PropTypes.string,
+    product: PropTypes.string,
+    price: PropTypes.shape({
+      currency: PropTypes.string,
+      value: PropTypes.number,
+    }),
+  }),
+};
 
 export default Order;
