@@ -1,6 +1,3 @@
-const weightInKilos = 85;
-const heightInCentimeters = 180;
-
 const calculateBMI = (weight, height) => {
   console.log(`Weight: ${weight}; Height: ${height}`);
 
@@ -11,9 +8,4 @@ const calculateBMI = (weight, height) => {
   return bmi;
 };
 
-const main = () => {
-  const bmi = calculateBMI(weightInKilos, heightInCentimeters);
-  console.log(`BMI: ${bmi.toFixed(2)}`);
-};
-
-main();
+module.exports = { calculateBMI };
