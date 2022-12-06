@@ -1,7 +1,7 @@
 const { calculateBMI } = require('./bmi');
-const { questionInt } = require('readline-sync');
+const { questionInt, questionFloat } = require('readline-sync');
 
-const weightInKilos = questionInt('What is your weight in kilos?');
+const weightInKilos = questionFloat('What is your weight in kilos?');
 const heightInCentimeters = questionInt('What is your height in centimeters?');
 
 const main = () => {
