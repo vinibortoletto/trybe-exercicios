@@ -256,3 +256,21 @@ describe('POST /activities', function () {
     expect(response.body).to.deep.equal(errorMessage);
   });
 });
+
+describe('POST /signup', function () {
+  it('1. should return 401 if any field is invalid', async function () {
+    const errorMessage = { message: 'Campos ausentes!' };
+
+    const newUserMock = {
+      email: '',
+      password: '',
+      firstName: '',
+      phone: '',
+    };
+
+    const response = await chai.request(app).post('/signup').send(newUserMock);
+
+    expect(response).to.have.status(401);
+    expect(response.body).to.deep.equal(errorMessage);
+  });
+});
