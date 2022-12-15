@@ -4,6 +4,7 @@ const router = Router();
 
 router.post(
   '/',
+  middleware.validateToken,
   middleware.validateName,
   middleware.validatePrice,
   middleware.validateDescription,
