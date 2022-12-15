@@ -207,4 +207,28 @@ describe('POST /activities', function () {
     expect(response).to.have.status(400);
     expect(response.body).to.deep.equal(errorMessage);
   });
+
+  it('10. should return 400 error if rating is not an integer between 1 and 5', async function () {
+    const errorMessage = {
+      message: 'O campo rating deve ser um número inteiro entre 1 e 5',
+    };
+
+    const newActivityMock = {
+      name: 'Trekking',
+      price: 0,
+      description: {
+        rating: 10,
+        difficulty: 'Fácil',
+        createdAt: '10/08/2022',
+      },
+    };
+
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send(newActivityMock);
+
+    expect(response).to.have.status(400);
+    expect(response.body).to.deep.equal(errorMessage);
+  });
 });
