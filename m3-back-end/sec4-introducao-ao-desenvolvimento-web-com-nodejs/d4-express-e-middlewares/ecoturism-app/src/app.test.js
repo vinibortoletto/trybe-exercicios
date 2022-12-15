@@ -231,4 +231,28 @@ describe('POST /activities', function () {
     expect(response).to.have.status(400);
     expect(response.body).to.deep.equal(errorMessage);
   });
+
+  it('11. should return 400 error if difficulty is not "Fácil", "Médio" or "Difícil"', async function () {
+    const errorMessage = {
+      message: "O campo difficulty deve ser 'Fácil', 'Médio' ou 'Difícil'",
+    };
+
+    const newActivityMock = {
+      name: 'Trekking',
+      price: 0,
+      description: {
+        rating: 5,
+        difficulty: 'Wrong Difficulty',
+        createdAt: '10/08/2022',
+      },
+    };
+
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send(newActivityMock);
+
+    expect(response).to.have.status(400);
+    expect(response.body).to.deep.equal(errorMessage);
+  });
 });
