@@ -21,5 +21,11 @@ module.exports = (req, res, next) => {
     });
   }
 
+  if (!description.difficulty) {
+    return res.status(400).json({
+      message: `O campo difficulty é obrigatório`,
+    });
+  }
+
   return next();
 };
