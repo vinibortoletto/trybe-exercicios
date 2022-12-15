@@ -15,5 +15,11 @@ module.exports = (req, res, next) => {
     });
   }
 
+  if (!description.rating) {
+    return res.status(400).json({
+      message: `O campo rating é obrigatório`,
+    });
+  }
+
   return next();
 };
