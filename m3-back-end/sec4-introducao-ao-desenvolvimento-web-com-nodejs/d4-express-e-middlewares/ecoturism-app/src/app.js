@@ -10,6 +10,7 @@ app.post(
   middleware.validateName,
   middleware.validatePrice,
   middleware.validateDescription,
+  middleware.validateCreatedAt,
   async function (_req, res) {
     const successMessage = { message: 'Atividade cadastrada com sucesso!' };
     return res.status(201).json(successMessage);
