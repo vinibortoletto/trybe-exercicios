@@ -160,14 +160,27 @@ describe('POST /activities', function () {
     expect(response).to.have.status(400);
     expect(response.body).to.deep.equal(errorMessage);
   });
+
+  it('8. should return 400 error if difficulty does not exists', async function () {
+    const errorMessage = {
+      message: 'O campo difficulty é obrigatório',
+    };
+
+    const newActivityMock = {
+      name: 'Trekking',
+      price: 0,
+      description: {
+        rating: 5,
+        createdAt: '10/08/2022',
+      },
+    };
+
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send(newActivityMock);
+
+    expect(response).to.have.status(400);
+    expect(response.body).to.deep.equal(errorMessage);
+  });
 });
-
-/* 
-Crie um middleware de validação para a chave description que possui as chaves createdAt, rating e difficulty. Ela deve:
-
-Ter todas as chaves obrigatórias;
-Retornar o status 400 para todas e uma mensagem em formato json;
-Sugestão: { "message": "O campo rating é obrigatório" };
-Sugestão: { "message": "O campo difficulty é obrigatório" }.
-
-*/
