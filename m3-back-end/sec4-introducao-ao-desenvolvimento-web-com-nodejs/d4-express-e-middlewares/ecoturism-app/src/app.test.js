@@ -294,4 +294,27 @@ describe('POST /signup', function () {
 
     sinon.restore();
   });
+
+  it('3. should return status 401 if token is invalid', async function () {
+    const errorMessage = { message: 'Token inválido!' };
+
+    const newActivityMock = {
+      name: 'Trekking',
+      price: 0,
+      description: {
+        rating: 5,
+        difficulty: 'Fácil',
+        createdAt: '10/08/2022',
+      },
+    };
+
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .set({ authorization: '' })
+      .send(newActivityMock);
+
+    expect(response).to.have.status(401);
+    expect(response.body).to.deep.equal(errorMessage);
+  });
 });
