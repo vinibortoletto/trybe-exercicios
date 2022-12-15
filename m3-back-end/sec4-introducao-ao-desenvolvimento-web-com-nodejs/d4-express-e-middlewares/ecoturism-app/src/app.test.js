@@ -48,4 +48,28 @@ describe('POST /activities', function () {
     expect(response).to.have.status(400);
     expect(response.body).to.deep.equal(errorMessage);
   });
+
+  it('3. should return 400 error if name length is less than 4', async function () {
+    const errorMessage = {
+      message: 'O campo name deve ter pelo menos 4 caracteres',
+    };
+
+    const newActivityMock = {
+      name: 'Tre',
+      price: 0,
+      description: {
+        rating: 5,
+        difficulty: 'Fácil',
+        createdAt: '10/08/2022',
+      },
+    };
+
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send(newActivityMock);
+
+    expect(response).to.have.status(400);
+    expect(response.body).to.deep.equal(errorMessage);
+  });
 });
