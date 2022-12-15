@@ -1,6 +1,8 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
+const sinon = require('sinon');
 const { app } = require('./app');
+const crypto = require('crypto');
 
 const { expect } = chai;
 chai.use(chaiHttp);
@@ -272,5 +274,24 @@ describe('POST /signup', function () {
 
     expect(response).to.have.status(401);
     expect(response.body).to.deep.equal(errorMessage);
+  });
+
+  it('2. should return status 200 and a random token when new user is inserted', async function () {
+    const randomToken = '04f5c21ff7f0ce3e';
+    sinon.stub(crypto, 'randomBytes').returns(randomToken);
+
+    const newUserMock = {
+      email: 'email@test.com',
+      password: 'test',
+      firstName: 'test',
+      phone: '1234567890',
+    };
+
+    const response = await chai.request(app).post('/signup').send(newUserMock);
+
+    expect(response).to.have.status(200);
+    expect(response.body).to.deep.equal({ token: randomToken });
+
+    sinon.restore();
   });
 });
