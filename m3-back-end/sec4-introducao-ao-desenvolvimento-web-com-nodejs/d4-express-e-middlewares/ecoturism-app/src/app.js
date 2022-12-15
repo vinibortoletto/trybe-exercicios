@@ -1,5 +1,5 @@
 const express = require('express');
-const middlewares = require('./middlewares');
+const middleware = require('./middleware');
 require('express-async-errors');
 
 const app = express();
@@ -7,8 +7,9 @@ app.use(express.json());
 
 app.post(
   '/activities',
-  middlewares.validateName,
-  middlewares.validatePrice,
+  middleware.validateName,
+  middleware.validatePrice,
+  middleware.validateDescription,
   async function (_req, res) {
     const successMessage = { message: 'Atividade cadastrada com sucesso!' };
     return res.status(201).json(successMessage);
