@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
     });
   }
 
-  if (!description.rating) {
+  if (description.rating === undefined) {
     return res.status(400).json({
       message: `O campo rating é obrigatório`,
     });
