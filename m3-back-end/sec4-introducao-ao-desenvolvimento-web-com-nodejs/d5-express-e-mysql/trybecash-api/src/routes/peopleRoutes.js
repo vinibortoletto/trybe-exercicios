@@ -29,4 +29,17 @@ router.get('/', async (_req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const [[result]] = await peopleDB.findById(id);
+
+    if (result) return res.status(200).json(result);
+    res.status(404).json({ message: 'Pessoa não encontrada' });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.sqlMessage });
+  }
+});
+
 module.exports = router;
