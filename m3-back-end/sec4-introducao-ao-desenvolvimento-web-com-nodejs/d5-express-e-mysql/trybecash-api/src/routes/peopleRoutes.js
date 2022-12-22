@@ -19,4 +19,14 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/', async (_req, res) => {
+  try {
+    const [result] = await peopleDB.findAll();
+    res.status(200).json(result);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.sqlMessage });
+  }
+});
+
 module.exports = router;
