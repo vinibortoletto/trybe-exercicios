@@ -7,7 +7,26 @@ const { connection } = require('../../src/db/connection');
 const { expect, use } = chai;
 use(chaiHttp);
 
+const peopleList = [
+  {
+    id: 1,
+    firstName: 'Luke',
+    lastName: 'Skywalker',
+    email: 'luke.skywalker@trybe.com',
+    phone: '851 678 4453',
+  },
+  {
+    id: 2,
+    firstName: 'Dart',
+    lastName: 'Vader',
+    email: 'dart.vader@trybe.com',
+    phone: '851 678 5665',
+  },
+];
+
 describe('Endpoint /people', function () {
+  afterEach(sinon.restore);
+
   it('should register new person', async function () {
     sinon.stub(connection, 'execute').resolves([{ insertId: 42 }]);
 
@@ -23,6 +42,4 @@ describe('Endpoint /people', function () {
       message: 'Pessoa cadastrada com sucesso com o id 42',
     });
   });
-
-  afterEach(sinon.restore);
 });
