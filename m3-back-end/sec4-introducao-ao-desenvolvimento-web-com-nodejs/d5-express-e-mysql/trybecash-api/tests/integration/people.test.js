@@ -42,4 +42,11 @@ describe('Endpoint /people', function () {
       message: 'Pessoa cadastrada com sucesso com o id 42',
     });
   });
+
+  it('should list all people', async function () {
+    sinon.stub(connection, 'execute').resolves([peopleList]);
+    const response = await chai.request(app).get('/people');
+    expect(response.status).to.equal(200);
+    expect(response.body).to.deep.equal(peopleList);
+  });
 });
