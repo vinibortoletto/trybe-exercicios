@@ -18,4 +18,15 @@ const findById = (id) => {
   return connection.execute('SELECT * FROM people WHERE id = ?', [id]);
 };
 
-module.exports = { insert, findAll, findById };
+const update = (person, id) => {
+  return connection.execute(
+    `
+    UPDATE people
+    SET first_name ?, last_name = ?, email = ?, phone = ?
+    WHERE id = ?
+  `,
+    [person.firstName, person.lastName, person.email, person.phone, id]
+  );
+};
+
+module.exports = { insert, findAll, findById, update };
