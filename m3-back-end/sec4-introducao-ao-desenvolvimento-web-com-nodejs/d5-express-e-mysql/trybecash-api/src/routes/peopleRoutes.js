@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.put('/people/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const person = req.body;
@@ -53,6 +53,7 @@ router.put('/people/:id', async (req, res) => {
         .status(200)
         .json({ message: `Pessoa de id ${id} atualizada com sucesso` });
     }
+
     return res.status(404).json({ message: 'Pessoa não encontrada' });
   } catch (error) {
     res.status(500).json({ message: error.sqlMessage });
