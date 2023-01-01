@@ -60,4 +60,21 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+router.delete('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const [result] = peopleDB.remove(id);
+
+    if (result.affectedRows > 0) {
+      return res
+        .status(200)
+        .json({ message: `Pessoa de id ${id} excluída com sucesso` });
+    }
+
+    return res.status(404).json({ message: 'Pessoa não encontrada' });
+  } catch (error) {
+    res.status(500).json({ message: error.sqlMessage });
+  }
+});
+
 module.exports = router;
