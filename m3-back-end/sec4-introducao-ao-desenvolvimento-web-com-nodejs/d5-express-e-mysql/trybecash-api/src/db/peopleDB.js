@@ -29,4 +29,8 @@ const update = (person, id) => {
   );
 };
 
-module.exports = { insert, findAll, findById, update };
+const remove = (id) => {
+  return connection.execute('DELETE FROM people WHERE id = ?', [id]);
+};
+
+module.exports = { insert, findAll, findById, update, remove };
