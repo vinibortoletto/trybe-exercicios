@@ -63,7 +63,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const [result] = peopleDB.remove(id);
+    const [result] = await peopleDB.remove(id);
 
     if (result.affectedRows > 0) {
       return res
