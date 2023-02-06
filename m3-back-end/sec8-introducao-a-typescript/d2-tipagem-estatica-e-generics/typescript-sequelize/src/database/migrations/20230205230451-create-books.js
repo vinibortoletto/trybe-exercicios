@@ -1,32 +1,39 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('comments', {
+    await queryInterface.createTable('books', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      text: {
+
+      title: {
         allowNull: false,
-        type: Sequelize.STRING(255),
+        type: Sequelize.STRING(30),
       },
-      author: {
-        allowNull: false,
-        type: Sequelize.STRING(100),
-      },
-      bookId: {
+
+      author_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: 'books',
+          model: 'authors',
           key: 'id',
         },
-        field: 'book_id',
+      },
+
+      genre_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'genres',
+          key: 'id',
+        },
       },
     });
   },
+
   down: async (queryInterface) => {
-    await queryInterface.dropTable('comments');
+    await queryInterface.dropTable('books');
   },
 };
